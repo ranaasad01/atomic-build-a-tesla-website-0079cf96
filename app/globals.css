@@ -1,156 +1,156 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-/* Snap scroll container */
-.snap-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-.snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Custom scrollbar */
-.snap-container::-webkit-scrollbar {
-  width: 4px;
-}
-.snap-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-.snap-container::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.3);
-  border-radius: 2px;
-}
-
-/* Fade-in animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.animate-fade-up {
-  animation: fadeUp 0.9s ease forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1.2s ease forwards;
-}
-
-/* Delay utilities */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-
-/* Button styles */
-.btn-primary {
-  @apply bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 text-sm tracking-wide;
-}
-
-.btn-outline {
-  @apply bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-full border border-white/40 hover:bg-white/30 transition-all duration-300 text-sm tracking-wide;
-}
-
-.btn-dark {
-  @apply bg-black text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 text-sm tracking-wide border border-gray-700;
-}
-
-.btn-red {
-  @apply bg-tesla-red text-white font-semibold px-8 py-3 rounded-full hover:bg-red-700 transition-all duration-300 text-sm tracking-wide;
-}
-
-/* Section overlay gradients */
-.overlay-bottom {
-  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7) 100%);
-}
-
-.overlay-top {
-  background: linear-gradient(to top, transparent 40%, rgba(0,0,0,0.5) 100%);
-}
-
-/* Card hover effects */
-.vehicle-card {
-  @apply relative overflow-hidden rounded-2xl cursor-pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.vehicle-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-}
-
-.vehicle-card:hover .card-overlay {
-  opacity: 1;
-}
-
-.card-overlay {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-/* Energy card */
-.energy-card {
-  @apply relative overflow-hidden rounded-2xl cursor-pointer;
-  transition: transform 0.4s ease;
-}
-
-.energy-card:hover {
-  transform: scale(1.02);
-}
-
-/* Stats counter */
-.stat-number {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
-}
-
-/* Mobile nav */
-.mobile-menu {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Image parallax */
-.parallax-img {
-  transition: transform 0.1s linear;
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #fff 0%, #ccc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Snap scroll container */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+.snap-container::-webkit-scrollbar {
+  width: 4px;
+}
+.snap-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.snap-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Button styles */
+.btn-primary {
+  @apply bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 text-sm tracking-wide;
+}
+
+.btn-outline {
+  @apply bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-full border border-white/40 hover:bg-white/30 transition-all duration-300 text-sm tracking-wide;
+}
+
+.btn-dark {
+  @apply bg-black text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 text-sm tracking-wide border border-gray-700;
+}
+
+.btn-red {
+  @apply bg-tesla-red text-white font-semibold px-8 py-3 rounded-full hover:bg-red-700 transition-all duration-300 text-sm tracking-wide;
+}
+
+/* Section overlay gradients */
+.overlay-bottom {
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7) 100%);
+}
+
+.overlay-top {
+  background: linear-gradient(to top, transparent 40%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Card hover effects */
+.vehicle-card {
+  @apply relative overflow-hidden rounded-2xl cursor-pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.vehicle-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Energy card */
+.energy-card {
+  @apply relative overflow-hidden rounded-2xl cursor-pointer;
+  transition: transform 0.4s ease;
+}
+
+.energy-card:hover {
+  transform: scale(1.02);
+}
+
+/* Stats counter */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Mobile nav */
+.mobile-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Image parallax */
+.parallax-img {
+  transition: transform 0.1s linear;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
