@@ -181,11 +181,11 @@ export default function HomePage() {
           <p className="text-red-500 text-xs font-semibold uppercase tracking-[0.3em] mb-4">
             Join the Revolution
           </p>
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight" style={{ fontFamily: "Geist", fontSize: "26px" }}>
             Drive the Change.
             <br />
             <span className="text-white/40">Own the Future.</span>
-          </h2>
+          </h1>
           <p className="text-white/60 text-lg mb-12 max-w-xl mx-auto">
             Over 5 million Tesla owners worldwide have already made the switch to sustainable transportation. Your journey starts here.
           </p>
